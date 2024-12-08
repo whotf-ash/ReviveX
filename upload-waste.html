@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Waste - ReviveX</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>ReviveX</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="how-it-works.html">How It Works</a></li>
+                <li><a href="upload-waste.html">Upload Waste</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="upload-hero">
+        <div class="upload-hero-content">
+            <h2>Upload Your Waste</h2>
+            <p>Submit your waste items for recycling and get rewarded.</p>
+        </div>
+    </section>
+
+    <section class="upload-form-section">
+        <div class="upload-container">
+            <h3>Upload Waste Item</h3>
+            <form action="upload-handler.php" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="waste-type">Select Waste Type:</label>
+                    <select id="waste-type" name="waste-type" required>
+                        <option value="" disabled selected>Select type of waste</option>
+                        <option value="electronics">Electronics</option>
+                        <option value="plastic">Plastic</option>
+                        <option value="metal">Metal</option>
+                        <option value="paper">Paper</option>
+                        <option value="glass">Glass</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="description">Item Description:</label>
+                    <textarea id="description" name="description" placeholder="Describe the item condition, size, etc." required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="upload-photo">Upload Photo of Item:</label>
+                    <input type="file" id="upload-photo" name="upload-photo" accept="image/*" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact-info">Your Contact Information:</label>
+                    <input type="text" id="contact-info" name="contact-info" placeholder="Enter your email or phone number" required>
+                </div>
+                <button type="submit" class="submit-btn">Submit Waste</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 ReviveX. All rights reserved.</p>
+            <ul class="social-links">
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Twitter</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

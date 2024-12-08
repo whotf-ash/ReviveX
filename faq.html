@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - ReviveX India</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>ReviveX</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="how-it-works.html">How It Works</a></li>
+                <li><a href="upload-waste.html">Upload Waste</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="faq-hero">
+        <div class="faq-hero-content">
+            <h2>Frequently Asked Questions</h2>
+            <p>Your questions about recycling, answered.</p>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <div class="faq-container">
+            <h3>Common Questions</h3>
+            <div class="faq-item">
+                <button class="faq-question">What items can I recycle through ReviveX India?</button>
+                <div class="faq-answer">
+                    <p>We accept electronics, plastics, metals, paper, and glass. Each item is evaluated based on its recyclability, and we provide pricing based on its condition and material type.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">How do I upload waste items?</button>
+                <div class="faq-answer">
+                    <p>Simply go to the "Upload Waste" page, take a clear picture of the items you wish to recycle, and submit it along with basic details such as the condition and type of item.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">How is the pricing determined?</button>
+                <div class="faq-answer">
+                    <p>Pricing is determined based on the condition of the waste item, its recyclability, and the current market demand for that type of material in India. You’ll receive an offer once our team has evaluated your submission.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Is there any cost involved for individuals?</button>
+                <div class="faq-answer">
+                    <p>No, there is no cost to upload your items for recycling. ReviveX India handles the shipping, customs, and processing, and you will be paid for the items we accept.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">How long does the process take?</button>
+                <div class="faq-answer">
+                    <p>Once you upload your waste items, we typically respond with an offer within 48 hours. After you accept the offer, shipping arrangements are made, and the entire process can take up to a week, depending on your location.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">What happens to the waste after it is collected?</button>
+                <div class="faq-answer">
+                    <p>After collection, the waste is sent to certified recycling companies in India. They process the items, ensuring they are properly recycled, reused, or repurposed, reducing environmental impact.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 ReviveX India. All rights reserved.</p>
+            <ul class="social-links">
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Twitter</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                answer.classList.toggle('active');
+
+                const allAnswers = document.querySelectorAll('.faq-answer');
+                allAnswers.forEach(ans => {
+                    if (ans !== answer) {
+                        ans.classList.remove('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
